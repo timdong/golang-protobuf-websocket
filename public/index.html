@@ -1,16 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
   <head>
     <title>WebSocket Example</title>
   </head>
   <body>
-    <script src="//cdn.rawgit.com/dcodeIO/ByteBuffer.js/4.0.0/dist/ByteBufferAB.js"></script>
-    <script src="//cdn.rawgit.com/dcodeIO/ProtoBuf.js/4.0.0/dist/ProtoBuf.js"></script>
+  <!--  <script src="//cdn.rawgit.com/dcodeIO/ByteBuffer.js/4.0.0/dist/ByteBufferAB.js"></script>
+   <script src="//cdn.rawgit.com/dcodeIO/ProtoBuf.js/4.0.0/dist/ProtoBuf.js"></script>
+   -->
+    <script src="https://cdn.jsdelivr.net/npm/bytebuffer@4.0.0/dist/ByteBufferAB.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/protobufjs@5.0.3/dist/protobuf.js"></script>
+
     <script type="text/javascript">
       (function() {
 
         var ProtoBuf = dcodeIO.ProtoBuf;
-        var builder = ProtoBuf.loadJsonFile("message.json");
+        var builder = ProtoBuf.loadJsonFile("./public/message.json");
 
         var data = document.getElementById("fileData");
         var conn = new WebSocket("ws://127.0.0.1:1337/ws");
@@ -29,5 +33,6 @@
         }
       })();
     </script>
+  <div><h1>{{.}}</h1></div>
   </body>
 </html>

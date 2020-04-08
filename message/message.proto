@@ -1,11 +1,15 @@
+syntax = "proto3";
 
+//protoc --go_out ./ message.proto
+//protoc -I=$SRC_DIR --go_out=$DST_DIR $SRC_DIR/addressbook.proto
+package message;
 message Message {
-  required int32 id = 1;
+   int32 id = 1;
   message Person {
-    required int32 id = 1;
-    required string name = 2;
+     int32 id = 1;
+     string name = 2;
   }
 
-  required Person author = 2;
-  required string text = 3;
+   Person author = 2;
+   string text = 3;
 }
