@@ -1,10 +1,6 @@
 #golang-protobuf-websocket
 
-Two process, client
-
-    npm i -g httpserver
-    cd public
-    hs ./
+Use Go Website
 
 Server
 
